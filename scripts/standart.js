@@ -25,16 +25,25 @@ function mathematics() {
 
 
 knopka.onclick = function () {
-    userInput = isNaN(Number(userInput.value));
+    userInput = Number(userInput.value);
+    value = isNaN(userInput);
+    if (value === true) {
 
-    if (step == true) {
-        res = userInput;
-        mathematics()
-        switchStep()
-    } else if (step = false) {
-        operator = userInput; // пометка перенести сюда проверку
-        switchStep()
+        if (step == true) {
+            res = userInput;
+            mathematics()
+            switchStep()
+        } else if (step == false) {
+            if (operator === "/" || ":" || "*" || "-" || "+") {
+            operator = userInput; // пометка перенести сюда проверку
+            switchStep()
+        } else {
+            console.log("error")
+        }
+        } else {
+            console.log("that not operator < O P E R A T O R > you know?")
+        }
     } else {
-        console.log("error")
+        console.log("error it isn't number");
     }
 }
