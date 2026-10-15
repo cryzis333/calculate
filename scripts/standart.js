@@ -9,8 +9,15 @@ let userFOutput = document.getElementById("firstOutput");
 let userOutput = document.getElementById("operOutput");
 let userTOutput = document.getElementById("twoOutput");
 
+userInput.focus();
+
 function switchStep() {
     step = !step;
+    if (step) {
+        userInput,placeholder = "Input number";
+    } else {
+        userInput.placeholder = "Input operator: + - * /"
+    }
 }
 
 function mathematics() {
@@ -26,12 +33,12 @@ function mathematics() {
         console.log("thats is not operator dolbaeb")
     }
     userInput.value = "";
-        userFOutput.value = "";
-        userFOutput.textContent = result;
+    userFOutput.value = "";
+    userFOutput.textContent = result;
 }
 
-
-knopka.onclick = function () {
+function confirm() {
+    if (userInput.value === "") return;
     let userInputTest = Number(userInput.value);
     let value = isNaN(userInputTest);
     if (step == true) {
@@ -39,7 +46,7 @@ knopka.onclick = function () {
             res = userInputTest;
             mathematics()
             switchStep()
-            userOutput.textContent = "";
+            userOutput.textContent = "";      
         }
     }
     else if (step == false) {
@@ -55,3 +62,17 @@ knopka.onclick = function () {
         console.log("that not operator < O P E R A T O R > you know?")
     }
 }
+userInput.focus();
+
+knopka.onclick = confirm;
+
+
+userInput.onkeydown = function (event) {
+    if (event.key === "Enter") {
+        knopka.click(); 
+    }
+};
+
+document.onkeydown = function () {
+    userInput.focus();
+};
