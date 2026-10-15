@@ -25,18 +25,18 @@ function mathematics() {
 
 
 knopka.onclick = function () {
-    userInputTest = Number(userInput.value);
+    let userInputTest = Number(userInput.value);
     let value = isNaN(userInputTest);
-        if (step == true) {
-            if (value === true) {
-            res = userInput;
+    if (step == true) {
+        if (value === false) {
+            res = userInputTest;
             mathematics()
             switchStep()
         }
     }
-         else if (step == false) {
+    else if (step == false) {
         if (operator === "/" || ":" || "*" || "-" || "+") {
-            operator = userInput; // пометка перенести сюда проверку
+            operator = userInput.value;
             switchStep()
         } else {
             console.log("error")
