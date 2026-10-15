@@ -8,21 +8,34 @@ let standart = document.getElementById("standart");
 let qwin = document.getElementById("qwin");
 let hueta = document.getElementById("hueta");
 
+let standartMode = document.getElementById("standartMode");
+let qwinMode = document.getElementById("qwinMode");
+let huetaMode = document.getElementById("huetaMode");
+
 btnMode.onclick = function () {
     modeMenu.hidden = !modeMenu.hidden;
 };
 
+function showMode(section) {
+    standartMode.hidden = true;
+    qwinMode.hidden = true;
+    huetaMode.hidden = true;
+
+    section.hidden = false;
+    modeMenu.hidden = true;
+}
+
+
+
+
 standart.onclick = function () {
-    let standartMode = document.getElementById("standartMode")
-    standartMode.hidden = !standartMode.hidden;
+    showMode(standartMode);
 }
 
 qwin.onclick = function () {
-    let qwinMode = document.getElementById("qwinMode")
-    qwinMode.hidden = !qwinMode.hidden;
+    showMode(qwinMode);
 }
 
 hueta.onclick = function () {
-    let huetaMode = document.getElementById("huetaMode")
-    huetaMode.hidden = !huetaMode.hidden;
+    showMode(huetaMode);
 }
