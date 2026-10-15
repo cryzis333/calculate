@@ -9,17 +9,22 @@
 </head>
 
 <body>
-    <main>
-        <header>
-            <div class="logo" id="logo">
-                <h2>calculate</h2>
-                <button class="mode" id="mode">
-                    <button id="standart"></button>
-                    <button id="qwin"></button>
-                    <button id="hueta"></button>
-                </button>
+    <header>
+        <h2 class="logo">calculate</h2>
+
+        <div class="mode" id="mode">
+            <button class="modeToggle" id="modeToggle">|||</button>
+
+           <div class="modeMenu" id="modeMenu" hidden>
+                <button data-mode="standart">Стандартный</button>
+                <button data-mode="qwin">Qwin</button>
+                <button data-mode="hueta">Hueta</button>
             </div>
-        </header>
+
+        </div>
+    </header>
+
+    <main>
 
         <section class="standart-mode" id="standart-mode">
             <input type="text" id="userInput" placeholder="Введите число" value="">
