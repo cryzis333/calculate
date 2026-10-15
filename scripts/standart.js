@@ -14,7 +14,7 @@ userInput.focus();
 function switchStep() {
     step = !step;
     if (step) {
-        userInput,placeholder = "Input number";
+        userInput.placeholder = "Input number";
     } else {
         userInput.placeholder = "Input operator: + - * /"
     }
@@ -61,8 +61,8 @@ function confirm() {
     } else {
         console.log("that not operator < O P E R A T O R > you know?")
     }
+    userInput.focus();
 }
-userInput.focus();
 
 knopka.onclick = confirm;
 
