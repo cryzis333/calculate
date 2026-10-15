@@ -46,7 +46,7 @@ function confirm() {
             res = userInputTest;
             mathematics()
             switchStep()
-            userOutput.textContent = "";      
+            userOutput.textContent = "";
         }
     }
     else if (step == false) {
@@ -69,7 +69,7 @@ knopka.onclick = confirm;
 
 userInput.onkeydown = function (event) {
     if (event.key === "Enter") {
-        knopka.click(); 
+        knopka.click();
     }
 };
 

@@ -30,6 +30,7 @@ function showMode(section) {
 
 standart.onclick = function () {
     showMode(standartMode);
+    console.log("свичнули btn mode")
 }
 
 qwin.onclick = function () {
