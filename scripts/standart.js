@@ -5,6 +5,10 @@ let res = 0.0;
 let userInput = document.getElementById("userInput");
 let knopka = document.getElementById("knopka");
 
+let userFOutput = document.getElementById("firstOutput");
+let userOutput = document.getElementById("operOutput");
+let userTOutput = document.getElementById("twoOutput");
+
 function switchStep() {
     step = !step;
 }
@@ -21,6 +25,9 @@ function mathematics() {
     } else {
         console.log("thats is not operator dolbaeb")
     }
+    userInput.value = "";
+        userFOutput.value = "";
+        userFOutput.textContent = result;
 }
 
 
@@ -32,12 +39,15 @@ knopka.onclick = function () {
             res = userInputTest;
             mathematics()
             switchStep()
+            userOutput.textContent = "";
         }
     }
     else if (step == false) {
-        if (operator === "/" || ":" || "*" || "-" || "+") {
+        if (userInput.value === "/" || userInput.value === ":" || userInput.value === "*" || userInput.value === "-" || userInput.value === "+") {
             operator = userInput.value;
             switchStep()
+            userInput.value = "";
+            userOutput.textContent = operator;
         } else {
             console.log("error")
         }
