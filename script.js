@@ -1,2 +1,4 @@
 
-let dropmenu = document.getElementById("dropbtn");
+
+
+let mode = document.getElementById("mode");
