@@ -156,8 +156,9 @@ input,
 .animatedH {
     font-size: 60px;
     text-align: center;
-    font-family: Gill Sans, sans-serif;
-    animation: pulse 4s ease-in-out infinite
+    display: inline-block;
+    font-family: sans-serif;
+    animation: pulse 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
