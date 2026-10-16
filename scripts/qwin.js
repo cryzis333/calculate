@@ -51,6 +51,7 @@ function press(key) {
         previous = null;
         operator = null;
         startNew = false;
+        qwinExpression.textContent = ""
     } else if (key == "Backspace") {
         current = current.slice(0, -1);
         if (current.length === 0) {
@@ -70,4 +71,3 @@ document.addEventListener("keydown", function (event) {
 function calculate(a, operator, b) {
     return math.evaluate(`${a} ${operator} ${b}`).toString();
 }
-console.log(operations["+"]("0.1", "0.2"), operations["*"]("0.1", "3"));

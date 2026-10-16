@@ -114,3 +114,110 @@ input,
 .knopka:hover {
     background: rgba(255, 255, 255, 0.18);
 }
+
+
+
+/* мне похуй будет нейрослоп - qwin mode */
+
+.qwinMode {
+    max-width: 360px;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+}
+
+.calc-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 96px;
+    padding: 8px 12px;
+    overflow: hidden;
+}
+
+.calc-expression {
+    min-height: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.calc-value {
+    max-width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    font-variant-numeric: tabular-nums;
+}
+
+.calc-value::-webkit-scrollbar {
+    display: none;
+}
+
+.calc-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.key {
+    padding: 16px 0;
+    font-family: inherit;
+    font-size: 18px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.05s;
+}
+
+.key:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.key:active {
+    transform: scale(0.96);
+}
+
+.key:focus-visible {
+    outline: 2px solid #4cc2ff;
+    outline-offset: 2px;
+}
+
+.key-fn,
+.key-op {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.key-fn:hover,
+.key-op:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.key-op {
+    font-size: 22px;
+}
+
+.key-equals {
+    font-weight: 600;
+    color: #000;
+    background: #4cc2ff;
+}
+
+.key-equals:hover {
+    background: #7ad4ff;
+}
